@@ -14,7 +14,10 @@ struct Pair {
     //use default values for copy construction and assignment
     
     M first() { return val_1; }
+    const M first() const {return val_1; }
+    
     N second() { return val_2; }
+    const N second() const {return val_2; }
 };
 
 #endif
