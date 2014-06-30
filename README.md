@@ -3,8 +3,8 @@ Arduino_pair
 
 Lightweight implementation of the STL Pair&lt;class M, class N> type for use on Arduino
 
-I use Pair&lt;int, int> to hold range: distance pairs for measurements from an ultrasonic sensor for my mobile robot.
-Then I push these pairs into a Vector &lt; Pair &lt; int, int> > so that I've got my data conveniently stored in
+I use `Pair&lt;int, int>` to hold range: distance pairs for measurements from an ultrasonic sensor for my mobile robot.
+Then I push these pairs into a `Vector &lt; Pair &lt; int, int> >` so that I've got my data conveniently stored in
 familiar c++ containers.  One of the examples in the library shows this use.  To get my Arduino_Vector
 see the README.md file at [This repo](https://github.com/zacsketches/Arduino_Vector.git)
 
