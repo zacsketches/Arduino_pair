@@ -1,3 +1,4 @@
+#include <Vector.h>
 #include <Pair.h>
 
 template<class M, class N>
@@ -14,6 +15,8 @@ void setup() {
   Serial.begin(57600);
   
   Serial.println();
+  
+  Serial.println("Same test at Pair.ino with a few vector uses at the end");
   
   Pair<int, int> p1(5, 3);
   Pair<char*, int> p2("test", 5);
@@ -35,10 +38,22 @@ void setup() {
   Serial.print("p4 copy constructed from p3: ");
   print(p4);
   
-  //use a typedef to reduce typing so many template arguments
-  typedef Pair<char*, char*> char_pair;
-  char_pair p5("test", "again");
-  char_pair p6("yada", "yada");
+  Vector<Pair<int, int> > range_bearing_vec;
+  typedef Pair<int, int> measurement;
+  measurement m1(83, 124);
+  measurement m2(23, 89);
+  measurement m3(78, 190);
+  range_bearing_vec.push_back(m1);
+  range_bearing_vec.push_back(m2);
+  range_bearing_vec.push_back(m3);
+  
+  Serial.println();
+  Serial.println("Let's have a look at the vector elements");
+  for(int i=0; i<range_bearing_vec.size(); ++i){
+      print(range_bearing_vec[i]);
+  }
+  
+  
 }
 
 void loop() {
